@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Price Prediction</title>
+    <title>Car Resale Price Prediction</title>
 </head>
 
 <body>
 
     <div style="color:blue">
         <form action="{{ url_for('predict')}}" method="post">
-            <h2>Car Price Predictive analysis</h2>
+            <h2>Car Resale Price Predictive analysis</h2>
             <h3>Year</h3>
             <input id="first" name="Year" type="number ">
             <h3>What is the Showroom Price?(Price in terms of $1,000)</h3><br><input id="second" name="Present_Price" required="required">
@@ -39,8 +39,9 @@
         </form>
 
 
+        <br><br><h3>{{ prediction_texts }}</h3>
 
-        <br><br><h3>{{ prediction_text }}<h3>
+        <br><br><h3>{{ prediction_text }}</h3>
     </div>
 
     <div>
